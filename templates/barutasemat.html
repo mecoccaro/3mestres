@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="shortcut icon" type="image/x-icon" href="https://barutasemat.net/validadorQR/css/images/top_logo.png" />
+
+	<script>
+		var site_url = 'https://barutasemat.net/validadorQR/';
+	</script>
+
+						<link type="text/css" href=https://barutasemat.net/validadorQR/css/materialize/materialize.min.css rel="stylesheet" />
+					<link type="text/css" href=https://barutasemat.net/validadorQR/css/fonts/font-awesome/font-awesome.min.css rel="stylesheet" />
+					<link type="text/css" href=https://barutasemat.net/validadorQR/css/materialize/background_colors.css rel="stylesheet" />
+					<link type="text/css" href=https://barutasemat.net/validadorQR/css/styles.css rel="stylesheet" />
+					<link type="text/css" href=https://barutasemat.net/validadorQR/css/toastr/toastr.min.css rel="stylesheet" />
+			
+						<script type="text/javascript" src=https://barutasemat.net/validadorQR/js/jquery/jquery-3.3.1.min.js></script>
+					<script type="text/javascript" src=https://barutasemat.net/validadorQR/js/materialize/materialize.min.js></script>
+					<script type="text/javascript" src=https://barutasemat.net/validadorQR/js/materialize/initializer.js></script>
+					<script type="text/javascript" src=https://barutasemat.net/validadorQR/js/toastr/toastr.min.js></script>
+			
+	<title>Lector QR</title>
+</head>
+
+<body>
+
+	<div id="loader-wrapper">
+		<div id="loader"></div>
+		<div class="loader-section section-left"></div>
+		<div class="loader-section section-right"></div>
+	</div>
+
+	<header>
+		<nav style="background:#fff; height:90px;">
+			<div class="nav-wrapper">
+				<a target="_blank" href="https://barutasemat.net/appweb/" class="brand-logo" style="padding:5px;">
+				<img src="https://barutasemat.net/validadorQR/css/images/logo.png" style="height: 65px; margin-top: 20px;margin-left: 25px;" />
+				</a>
+				<ul id="nav-mobile" class="left hide-on-med-and-down">
+				</ul>
+			</div>
+		</nav>
+	</header>
+
+	<main>
+		<div id="contenedor" class="">
+
+
+
+
+<div class="row card-panel z-depth-2 top" style='background:#00796b; border-radius:5px; color:#fff;'>
+<!-- dfdedf  0fd581 09ac7f-->
+
+  <div class="col xl3 l3 m6 s12 hide-on-med-and-down center-align">
+    <a class="modal-trigger" href="#modalQR">
+      <img id="qr-modal" src="data:image/png;base64,{{ qr_data }}" width="50%" height="50%"/></a>
+    <h6 class="medium-text">040124808</h6>
+  </div>
+  <div class="col xl6 l6 m6 s12 center-align">
+    <h6><b>COMPROBANTE DE REGISTRO VEHICULAR </b></h6>
+    <h6><b>
+
+
+        {{ name }}
+              
+    </b></h6>
+
+  </div>
+  <div class="col xl3 l3 m6 s12 center-align">
+    <a class="modal-trigger" href="#modalQR"><img id="qr-modal" src="data:image/png;base64,{{ qr_data }}" width="50%" height="50%"/></a><br/>
+    <h6 class="medium-text">040124808</h6>
+  </div>
+</div>
+<div class="row card-panel z-depth-2" style='border-radius:5px;'>
+  <div class="rows info-view col xl12 l12 m12 s12 blue-text text-darken-4">
+    <div class="col xl12 l12 m12 s12 center-align">
+      <div class="col xl3 l3 m6 s12">
+        <b>RIF Ó CEDULA:</b> <br/> V-{{cedula}}     </div>
+      <div class="col xl3 l3 m6 s12">
+        <b>TIPO TRÁMITE:</b> <br/> REGISTRO VEHICULAR       </div>
+      <div class="col xl3 l3 m6 s12">
+        <b>NÚMERO DE CUENTA:</b> <br/> 040124808      </div>
+      <div class="col xl3 l3 m6 s12">
+        <b>ESTADO</b> <br/>               <strong style="color:green">Vigente hasta:</strong><span> 2025-12-31</span>
+              </div>
+    </div>
+
+    <div class="col xl12 l12 m12 s12 block-header">
+        <h6 class="title text-center" style="text-align: center;">
+            <b>DATOS DEL VEHÍCULO
+          </b>
+          <hr>
+        </h6>
+      </div>
+      <div class="col xl12 l12 m12 s12 center-align">
+          <div class="col xl3 l3 m4 s12">
+            <b>PLACA</b> <br/> {{placa}}          </div>
+          <div class="col xl3 l3 m4 s12">
+            <b>MARCA</b> <br/> {{marca}}          </div>
+          <div class="col xl3 l3 m4 s12">
+            <b>MODELO</b> <br/> {{modelo}}         </div>
+          <div class="col xl3 l3 m4 s12">
+            <b>COLOR      -     AÑO</b> <br/>
+
+            {{color}} -
+            
+            {{ano}}         </div>
+        </div>
+    </div> 
+      <!--       
+      <div class="row">
+          <div class="col xl12 l12 m12 s12 block-header">
+            <h6 class="title text-center" style="text-align: center;">
+                <b>DATOS DE PAGO
+              </b>
+              <hr>
+            </h6>
+          </div>
+          <div class="col xl12 l12 m12 s12 center-align">
+              <div class="col xl3 l4 m6 s12">
+                <b>RECIBO</b> <br/>  <br/> 
+              </div>
+              <div class="col xl3 l4 m6 s12">
+                <b>PLANILLA</b> <br/>               </div>
+              <div class="col xl3 l4 m6 s12">
+                <b>FECHA DE PAGO</b> <br/>               </div>
+
+              <div class="col xl3 l4 m6 s12">
+                <b>ESTADO</b> <br/>               </div>
+            </div>
+        </div> 
+      -->
+  </div><!--/.rows info-view -->
+</div><!--/.row card-panel -->
+
+
+<div id="modalQR" class="modal">
+  <div class="modal-content center-align">
+    <img id="qr-modal" src="data:image/png;base64,{{ qr_data }}"/>
+  </div>
+</div>  </div><!--/ #contenedor -->
+  </main>
+
+  <footer class="page-footer medium-text" style="background-color: #2D9800;">
+    <div class="container">
+      <div class="row">
+        <div class="col l12 s12">
+          <p class="white-text text-darken-4 center-align" style="font-size: 16px;">
+            <b>Servicio Autónomo de Administración Tributaria (SEMAT) </b> </br> <b> Av. Río Caura, Centro Empresarial Torre Humboldt </b>
+            </br><b>Nivel Acceso, Locales AC-7 y AC-8 </b> <b>Urbanización Parque Humboldt, Estado Miranda </b>
+            </br><b>Teléfono: 0 - 501 - BARUTA - 1 (0501 - 227882 - 1) </b>
+            </br><b> www.alcaldiadebaruta.gob.ve | RIF.: G-20000601-3</b>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="text/javascript">
+    // $('.loader').fadeIn();
+    $(document).ready(function() {
+      $('#loader-wrapper').delay(700).fadeOut();
+    });
+    toastr.options = {
+      "closeButton": false,
+      "debug": false,
+      "newestOnTop": false,
+      "progressBar": true,
+      "positionClass": "toast-top-full-width",
+      "preventDuplicates": false,
+      "onclick": null,
+      "showDuration": "300",
+      "hideDuration": "1000",
+      "timeOut": "10000",
+      "extendedTimeOut": "1000",
+      "showEasing": "swing",
+      "hideEasing": "linear",
+      "showMethod": "fadeIn",
+      "hideMethod": "fadeOut"
+    };
+  </script>
+
+  </body>
+
+  </html>
