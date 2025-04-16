@@ -1,8 +1,14 @@
+import os
+
 from flask import Flask, render_template, request
 import qrcode
 from io import BytesIO
 import base64
 import pyshorteners
+from dotenv import load_dotenv
+
+load_dotenv()  # take environment variables
+
 
 app = Flask(__name__)
 
@@ -18,7 +24,9 @@ def validador():
     color = request.args.get('color', 'VERDE')
     ano = request.args.get('ano', '2007')
 
-    url = f'https://trimestres-56c50590f1dd.herokuapp.com/validador?name={name}&placa={placa}&cedula={cedula}&marca={marca}&modelo={modelo}&color={color}&ano={ano}'
+    main_url = os.getenv('url')
+
+    url = f'{main_url}?name={name}&placa={placa}&cedula={cedula}&marca={marca}&modelo={modelo}&color={color}&ano={ano}'
 
     # Acortar la URL utilizando pyshorteners
     s = pyshorteners.Shortener()
