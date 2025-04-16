@@ -18,7 +18,7 @@ def validador():
     color = request.args.get('color', 'VERDE')
     ano = request.args.get('ano', '2007')
 
-    url = f'https://mecoccaro.github.io/validador?name={name}&placa={placa}&cedula={cedula}&marca={marca}&modelo={modelo}&color={color}&ano={ano}'
+    url = f'https://trimestres-56c50590f1dd.herokuapp.com/validador?name={name}&placa={placa}&cedula={cedula}&marca={marca}&modelo={modelo}&color={color}&ano={ano}'
 
     # Acortar la URL utilizando pyshorteners
     s = pyshorteners.Shortener()
